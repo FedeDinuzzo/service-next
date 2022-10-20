@@ -11,7 +11,9 @@ const Heladeras = () => (
     
     <div className={layout.sectionImgReverse}>
       <Image src={heladeraFrente} alt="heladera" loading="lazy" className="w-[280px] md:w-[320px] xl:w-auto lg:mr-36"/>
-      <Image src={atencion} alt="atencion tecnica inmediata" loading="lazy" className="absolute pt-52 pl-28 md:pl-32 lg:pl-48 md:w-[86%] xl:w-auto" />
+      <div className='absolute pt-52 pl-28 md:pl-32 lg:pl-48 md:w-[86%] xl:w-auto'>
+        <Image src={atencion} alt="atencion tecnica inmediata" loading="lazy" />
+      </div>
     </div>
 
     <div className="lg:pr-8">

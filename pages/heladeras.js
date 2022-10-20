@@ -1,10 +1,10 @@
 import React from 'react';
-import Testimonials from '../Testimonials';
-import Hero from '../Hero';
-import Repair from '../Repair';
-import WorkForm from '../WorkForm';
-import CTA from '../CTA';
-import styles from '../../style';
+import Testimonials from '../components/Testimonials';
+import Hero from '../components/Hero';
+import Repair from '../components/Repair';
+import WorkForm from '../components/WorkForm';
+import CTA from '../components/CTA';
+import styles from '../constants/style';
 import { heladeraHero, reparacionHeladeras, step2, tecnicoHeladeras } from '../../assets';
 
 function heladeras() {

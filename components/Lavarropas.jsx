@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import lavarropas from '../public/lavarropas-frente.webp'
 import styles, { layout } from "../constants/style"
 import Button from "./Button"
 
@@ -13,7 +14,7 @@ const Lavarropas = () => (
     </div>
     
     <div className={layout.sectionImgReverse}>
-      <Image src={lavarropas} alt="lavarropas" loading="lazy" width="100%" h="100%" className="w-[240px] md:w-[280px] xl:w-auto lg:ml-36"/>
+      <Image src={lavarropas} alt="lavarropas" loading="lazy" className="w-[240px] md:w-[280px] xl:w-auto lg:ml-36"/>
     </div>
     
   </section>

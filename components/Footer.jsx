@@ -1,5 +1,5 @@
-import styles from "../styles/style";
-import { logo } from "../public/assets";
+import styles from "../constants/style";
+import Image from 'next/image'
 import { footerLinks, socialMedia } from '../constants/index';
 import { Fragment } from "react";
 
@@ -9,7 +9,9 @@ const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
       <div className="flex-1 flex flex-col justify-start mr-10">
-        <img src={logo} alt="logo" loading="lazy" className="w-[266px] h-[72px] object-contain" />
+        <div>
+          <Image src={`/logo.svg`} alt="logo" loading="lazy" width={266} height={72} />
+        </div>
         <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>Bien hecho es mejor que bien dicho. Tu service de confianza.</p>
       </div>
 
@@ -43,7 +45,9 @@ const Footer = () => (
       <div className="flex flex-row md:mt-0 mt-6">
         {socialMedia.map((social, index) => (
           <Fragment key={social.id}>
-          <img src={social.icon} alt={social.name} className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length -1 ? 'mr-6' : 'mr-0'}`} />
+          <div className="w-[21px] h-[21px] mx-1">
+            <Image src={`/${social.icon}.svg`} alt={social.name} width={100} height={100} className={`cursor-pointer ${index !== socialMedia.length -1 ? 'mr-6' : 'mr-0'}`} />
+          </div>
           </Fragment>
         ))}
       </div>
