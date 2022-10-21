@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from "../constants/style"
 import Hero from "../components/Hero"
-import Stats from "../components/stats"
+import Stats from "../components/Stats"
 import Features from '../components/Features'
 import Heladeras from '../components/Heladeras'
 import Lavarropas from '../components/Lavarropas'
