@@ -4,6 +4,7 @@ import Button from "./Button"
 import atencion from '../public/Atencion.webp'
 import heladeraFrente from '../public/heladera-frente.webp'
 
+
 const Heladeras = () => (
   <section id="product" className={`${layout.sectionReverse} mt-6 md:mt-20 xl:mt-0`}>
     <div className="absolute z-[3] w-[30%] h-[30%] -left-[30%] -mt-[20%] rounded-full white__gradient"/>
