@@ -46,10 +46,10 @@ const Hero = ({ textOne, textTwo, textThree, titleOne, titleTwo, titleThree, img
       <div class="w-[6%] sm:w-[34%] md:w-[14%] xl:w-[0%]"/>
       <div class="w-[94%] sm:w-[70%] md:w-[86%] xl:w-[100%] h-[100%] relative z-[5] pb-[400px] sm:pb-[500px] md:pb-[640px]">
         <div class="absolute right-[12%]">
-          <Image rel="preload" src={heroVector} alt="" class="heroVector"/>
+          <Image src={heroVector} alt="" class="heroVector"/>
         </div>
         <div class="absolute">
-          <Image rel="preload" src={img} alt="fondo" class="heroImg"/>
+          <Image src={img} priority alt="fondo" class="heroImg"/>
         </div>
         
         <div class="balls">
@@ -95,7 +95,7 @@ const Hero = ({ textOne, textTwo, textThree, titleOne, titleTwo, titleThree, img
         </div>
 
         <div class="absolute md:w-full md:h-full ">
-          <Image rel="preload" src={robotHand} alt="fondo" class="robotHand"/>
+          <Image src={robotHand} priority alt="fondo" class="robotHand"/>
         </div>
       </div>
     </div>
