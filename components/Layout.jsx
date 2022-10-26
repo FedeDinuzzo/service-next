@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import Footer from '../components/Footer'
 import styles from '../constants/style'
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+
+const Footer = dynamic(() => import('../components/Footer'), {
+  suspense: true,
+});
 
 function Layout({ children, textOne, textTwo, textThree, titleOne, titleTwo, titleThree, img }) {
   return (
@@ -28,12 +33,14 @@ function Layout({ children, textOne, textTwo, textThree, titleOne, titleTwo, tit
       </div>
     </div>
 
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <main>{children}</main>
-        <Footer />
+    <Suspense fallback={`Loading...`}>
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <main>{children}</main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </Suspense>
   </div>
   )
 }
